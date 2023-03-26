@@ -2,7 +2,7 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 
-const fetchImagesWithQuery = async (searchQuery, page = 1) => {
+const fetchImagesWithQuery = async (searchQuery, page) => {
   const response = await axios.get(`/?q=${searchQuery}&page=${page}`, {
     params: {
       key: '1600525-016427548b1ce21d96fbba306',
