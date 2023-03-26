@@ -20,7 +20,14 @@ const ImageGallery = props => {
 };
 
 ImageGallery.propTypes = {
-  photos: propTypes.array,
+  photos: propTypes.arrayOf(
+    propTypes.shape({
+      key: propTypes.string,
+      smallImage: propTypes.string,
+      largeImage: propTypes.string,
+      alt: propTypes.string,
+    })
+  ),
   onClick: propTypes.func.isRequired,
 };
 
